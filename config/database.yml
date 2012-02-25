@@ -1,0 +1,24 @@
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: pjax-on-rails
+  pool: 5
+  username: postgres
+  password:
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: pjax-on-rails_development
+  pool: 5
+  username: postgres
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: pjax-on-rails_test
+  pool: 5
+  username: postgres
+  password:
+

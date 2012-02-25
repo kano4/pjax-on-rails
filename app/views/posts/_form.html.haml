@@ -1,0 +1,13 @@
+.clearfix
+  = f.label :name, t("activerecord.attributes.post.name", :default => "Name")
+  .input
+    = f.text_field :name, :class => 'text_field'
+.clearfix
+  = f.label :description, t("activerecord.attributes.post.description", :default => "Description")
+  .input
+    = f.text_area :description, :class => 'text_area', :rows => 3
+
+.form-actions
+  %button{:class => "btn primary", :type => "submit"} Save
+  or
+  = link_to "Cancel", posts_path
