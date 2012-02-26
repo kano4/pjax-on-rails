@@ -6,7 +6,7 @@ describe PostsController do
   # Post. As you add validations to Post, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    { :name => "Test" }
   end
 
   # This should return the minimal set of values that should be in the session

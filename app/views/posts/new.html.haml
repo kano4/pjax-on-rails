@@ -1,2 +1,6 @@
 = form_for @post, :url => posts_path, :html => { :class => :form } do |f|
+  - unless @post.errors.blank?
+    %div{:class => "alert alert-error"}
+      - @post.errors.full_messages.each do |msg|
+        = msg
   = render :partial => "form", :locals => {:f => f}

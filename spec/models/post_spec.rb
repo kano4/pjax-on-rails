@@ -8,17 +8,15 @@ describe Post do
 
   subject { @post }
 
-  shared_examples 'post with validation' do
-    it 'saves successfully' do
-      subject.save.should be_true
-    end
+  it 'saves successfully' do
+    subject.save.should be_true
+  end
 
-    context 'with blank name' do
-      before { @post.name = '' }
+  context 'with blank name' do
+    before { @post.name = '' }
 
-      it "fails to save" do
-        subject.save.should_not be_true
-      end
+    it "fails to save" do
+      subject.save.should_not be_true
     end
   end
 end
